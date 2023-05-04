@@ -33,7 +33,7 @@ const letterPositions = function (sentence) {
   const results = {};
   for (letter in sentence) {
     let char = sentence[letter];
-    if (sentence[letter] !== ' ') {
+    if (char !== ' ') {
       if (!results[char]) {
         results[char] = [letter] 
       } else {
