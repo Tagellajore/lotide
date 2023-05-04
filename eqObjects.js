@@ -19,12 +19,8 @@ const assertEqual = function(actual, expected) {
 };
 
 
-// Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
+const eqObjects = function(object1, object2) { // Declare function eqObjects, that takes two objects as parameters
 
-const eqObjects = function(object1, object2) {
-//const keys1 = Object.keys(object1);
-//const keys2 = Object.keys(object2);
 
 let obj1Keys = Object.keys(object1);
 let obj2Keys = Object.keys(object2);
@@ -43,20 +39,10 @@ if (obj1Keys.length === obj2Keys.length) { //compare lengths, not equal returns 
 } else {
   return false;
 }
-return true;  //only reach true if all keys match
+return true;  
 };
 
 
-/*if (keys1.length !== keys2.length) {
-  return false;
-}
-for (let key of keys1) {
-  if (object1[key] !== object2[key]) {
-    return false
-  }
-}
-return true;
-};*/
 
 const shirtObject = { color: "red", size: "medium" };
 const anotherShirtObject= { size: "medium", color: "red" };
