@@ -25,7 +25,7 @@ const eqArrays = function(arr1, arr2) {
     } else {
       return `Assertion Failed : ${actual} !== ${expected}`;
     }*/
-  }
+  };
 
   console.log(assertArraysEqual(eqArrays([1,2,3], [1,2,2]), true));
   console.log(assertArraysEqual(eqArrays([1,2,3], [1,2,3]), true));
