@@ -6,6 +6,5 @@ const tail = function(array) {
   }
 };
 
-console.log(tail([1,2,3]));
-
 module.exports = tail;
+
