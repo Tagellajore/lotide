@@ -1,7 +1,5 @@
 const eqArrays = require('./eqArrays');
 
-const assertEqual = require('./assertEqual');
-
 const eqObjects = function(object1, object2) { // Declare function eqObjects, that takes two objects as parameters
 
 
@@ -25,18 +23,4 @@ const eqObjects = function(object1, object2) { // Declare function eqObjects, th
   return true;
 };
 
-const shirtObject = { color: "red", size: "medium" };
-const anotherShirtObject = { size: "medium", color: "red" };
-eqObjects(shirtObject , anotherShirtObject);
-
-const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
-const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
-eqObjects(multiColorShirtObject  , anotherMultiColorShirtObject); // => true
-
-const longSleeveShirtObject = { size: "medium", color: "red", sleeveLength: "long" };
-eqObjects(shirtObject , longSleeveShirtObject);
-
-console.log(assertEqual(eqObjects(shirtObject , anotherShirtObject) , true));
-console.log(assertEqual(eqObjects(shirtObject , longSleeveShirtObject) , true));
-
-console.log(assertEqual(eqObjects(multiColorShirtObject  , anotherMultiColorShirtObject) , true));
+module.exports = eqObjects;
