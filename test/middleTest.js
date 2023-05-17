@@ -12,7 +12,7 @@ describe("#tail", () => {
     assert.deepEqual(middle([1, 2, 3]), [2]);
   });
   it("returns [] for ['5']", () => {
-    assert.deepEqual(middle(['5']), []); 
+    assert.deepEqual(middle(['5']), []);
   });
 
 

@@ -1,20 +1,9 @@
-// have a list of all the attendees
-// count the number of times certain names appear on the list
+const assertEqual = require('./assertEqual');
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    return `Assertion Passed: ${actual}  ===  ${expected}`;
-  } else {
-    return `Assertion Failed: ${actual} !== ${expected}`;
-  }
-};
-
-// allItems : an array of strings that we need to look through
-// itemsToCount : an object specifiying what to count
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
   for (const item of allItems) {
-    if (itemsToCount[item]) { 
+    if (itemsToCount[item]) {
       if (results[item]) {
         results[item] += 1;
       } else {
